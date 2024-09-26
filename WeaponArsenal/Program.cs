@@ -10,18 +10,24 @@ List<Weapon> weapons = JsonSerializer.Deserialize<List<Weapon>>(textWeapon);
 
 Console.WriteLine("How many attacks do you want to make?");
 
+string atkNumAnswer = Console.ReadLine();
+
 int atkNum = 0;
 
-
+int.TryParse(atkNumAnswer, out atkNum);
 
 
 int totDmg = 0;
 
 for (int i = 0; i < atkNum; i++)
 {
-    int dmg = weapons[0].Attack();
+    int dmg = weapons[0].Attack();    
+    Console.WriteLine($"{dmg}");
+
     totDmg += dmg;
 }
+
+Console.WriteLine($"Your damage was {totDmg}");
 
 
 
