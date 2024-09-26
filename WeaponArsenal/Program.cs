@@ -2,6 +2,19 @@
 using System.Net.Mail;
 using System.Text.Json.Serialization; 
 
+Enemy firstEnemy = new Enemy()
+{
+    Name = "Bobo",
+    hitPoints = 75
+};
+
+// Ändra till Weapon
+// string jsonWeapon = JsonSerializer.Serialize(firstWeapon);
+// Console.WriteLine(jsonWeapon);
+
+// File.WriteAllText("weapons.json", jsonWeapon);
+
+
 string textWeapon = File.ReadAllText("weapons.json");
 
 List<Weapon> weapons = JsonSerializer.Deserialize<List<Weapon>>(textWeapon);
@@ -27,7 +40,7 @@ for (int i = 0; i < atkNum; i++)
     totDmg += dmg;
 }
 
-Console.WriteLine($"Your damage was {totDmg}");
+Console.WriteLine($"The total damage was {totDmg}");
 
 
 
@@ -41,6 +54,7 @@ Console.ReadLine();
 //     DamageMin = 4,
 //     DamageMax = 19
 // };
+
 
 // string jsonWeapon = JsonSerializer.Serialize(firstWeapon);
 // Console.WriteLine(jsonWeapon);
