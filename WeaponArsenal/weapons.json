@@ -1,7 +1,12 @@
 [
     { 
         "Name": "Katana", 
-        "DamageMin": 4, 
+        "DamageMin": 5, 
         "DamageMax": 19 
+    },
+    { 
+        "Name": "Broadsword", 
+        "DamageMin": 6, 
+        "DamageMax": 22 
     }
 ]

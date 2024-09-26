@@ -11,8 +11,8 @@ public class Weapon
     [JsonInclude]
     public int DamageMax;
 
-    // public void Attack(int dmg)
-    // {
-    //     int dmgNumber = Rando
-    // }
+    public int Attack()
+    {
+        return Random.Shared.Next(DamageMin, DamageMax);
+    }
 }
