@@ -11,8 +11,8 @@ public class Weapon
     [JsonInclude]
     public int DamageMax;
 
-    public void Attack(int dmg)
-    {
-        
-    }
+    // public void Attack(int dmg)
+    // {
+
+    // }
 }
