@@ -13,6 +13,6 @@ public class Weapon
 
     // public void Attack(int dmg)
     // {
-
+    //     int dmgNumber = Rando
     // }
 }

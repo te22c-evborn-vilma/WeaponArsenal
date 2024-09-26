@@ -1,16 +1,26 @@
 ﻿global using System.Text.Json;
 using System.Text.Json.Serialization; 
 
-Weapon firstWeapon = new Weapon() 
-{
-    Name = "Katana",
-    DamageMin = 4,
-    DamageMax = 19
-};
+string textWeapon = File.ReadAllText("weapons.json");
 
-string jsonWeapon = JsonSerializer.Serialize(firstWeapon);
-Console.WriteLine(jsonWeapon);
+List<Weapon> weapons = JsonSerializer.Deserialize<List<Weapon>>(textWeapon);
 
-File.WriteAllText("weapons.json", jsonWeapon);
+Console.WriteLine(weapons[0].Name);
 
 Console.ReadLine();
+
+
+
+
+
+// Weapon firstWeapon = new Weapon() 
+// {
+//     Name = "Katana",
+//     DamageMin = 4,
+//     DamageMax = 19
+// };
+
+// string jsonWeapon = JsonSerializer.Serialize(firstWeapon);
+// Console.WriteLine(jsonWeapon);
+
+// File.WriteAllText("weapons.json", jsonWeapon);
