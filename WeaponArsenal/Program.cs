@@ -1,2 +1,6 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿Weapon firstWeapon = new Weapon() 
+{
+    Name = "Katana",
+    DamageMin = 4,
+    DamageMax = 19
+};
