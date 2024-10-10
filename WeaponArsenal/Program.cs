@@ -8,7 +8,7 @@ List<Enemy> enemies = JsonSerializer.Deserialize<List<Enemy>>(textEnemy);
 string textWeapon = File.ReadAllText("weapons.json");
 List<Weapon> weapons = JsonSerializer.Deserialize<List<Weapon>>(textWeapon);
 
-Console.WriteLine("Please choose a weapon (only write the number before the name)\n");
+Console.WriteLine($"Please choose a weapon to attack {enemies[0].Name} with\n(only write the number before the name)\n");
 
 int length = weapons.Count;
 for (int j = 0; j < length; j++)
@@ -21,12 +21,11 @@ string choice = Console.ReadLine();
 int weaponChoice = 0;
 int.TryParse(choice, out weaponChoice);
 
-Console.WriteLine("How many attacks do you want to make? (only write the number of attacks)");
-
+Console.WriteLine($"{enemies[0].Name} has {enemies[0].HitPoints} Hp");
+Console.WriteLine("How many attacks do you want to make? \n(only write the number of attacks)");
 string atkNumAnswer = Console.ReadLine();
 
 int atkNum = 0;
-
 int.TryParse(atkNumAnswer, out atkNum);
 
 for (int i = 0; i < atkNum; i++)
@@ -39,7 +38,7 @@ for (int i = 0; i < atkNum; i++)
 
 if (enemies[0].HitPoints > 0)
 {
-    Console.WriteLine($"{enemies[0].Name} was hit {atkNum} number of time(s) and has {enemies[0].HitPoints} Hp left");
+    Console.WriteLine($"{enemies[0].Name} was hit {atkNum} time(s) and has {enemies[0].HitPoints} Hp left");
 }
 else 
 {
@@ -48,6 +47,11 @@ else
 
 Console.ReadLine();
 
+/*
++ Loop som avslutas när fiendens hp är 0 eller mindre - spelaren får attackera på nytt tills fienden har 0 hp
++ Flera enemies
++ Spelaren får välja vem som ska attackeras först
+*/
 
 
 
