@@ -1,6 +1,14 @@
 [
     {
-        "Name":"Scar",
-        "HitPoints":75
+        "Name": "Scar",
+        "HitPoints": 75
+    },
+    {
+        "Name": "Lament",
+        "HitPoints": 100
+    },
+    {
+        "Name": "Fractsidus",
+        "HitPoints": 60
     }
 ]

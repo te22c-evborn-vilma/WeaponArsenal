@@ -31,7 +31,7 @@ int.TryParse(atkNumAnswer, out atkNum);
 for (int i = 0; i < atkNum; i++)
 {
     int dmg = weapons[weaponChoice].Attack();    
-    Console.WriteLine($"{dmg}");
+    Console.WriteLine($"-{dmg}");
 
     enemies[0].HitPoints -= dmg;
 }
@@ -48,9 +48,11 @@ else
 Console.ReadLine();
 
 /*
++ Skriv kommentarer som förtydligar koden
 + Loop som avslutas när fiendens hp är 0 eller mindre - spelaren får attackera på nytt tills fienden har 0 hp
-+ Flera enemies
++ Flera fiender
 + Spelaren får välja vem som ska attackeras först
++ eller så väljs en random fiende
 */
 
 
