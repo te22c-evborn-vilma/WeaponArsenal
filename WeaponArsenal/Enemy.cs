@@ -6,5 +6,5 @@ public class Enemy
     public string Name;
     
     [JsonInclude]
-    public int hitPoints;
+    public int HitPoints;
 }
