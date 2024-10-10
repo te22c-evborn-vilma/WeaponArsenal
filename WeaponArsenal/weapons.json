@@ -8,5 +8,10 @@
         "Name": "Broadsword", 
         "DamageMin": 6, 
         "DamageMax": 22 
+    },
+    {
+        "Name": "Axe",
+        "DamageMin": 8,
+        "DamageMax": 21
     }
 ]
