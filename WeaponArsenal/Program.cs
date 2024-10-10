@@ -37,7 +37,14 @@ for (int i = 0; i < atkNum; i++)
     enemies[0].HitPoints -= dmg;
 }
 
-Console.WriteLine($"{enemies[0].Name} was hit {atkNum} number of time(s) and has {enemies[0].HitPoints} Hp left");
+if (enemies[0].HitPoints > 0)
+{
+    Console.WriteLine($"{enemies[0].Name} was hit {atkNum} number of time(s) and has {enemies[0].HitPoints} Hp left");
+}
+else 
+{
+    Console.WriteLine($"{enemies[0].Name} took a lot of damage and is dead");
+}
 
 Console.ReadLine();
 
