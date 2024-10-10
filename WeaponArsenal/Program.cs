@@ -8,7 +8,7 @@ List<Enemy> enemies = JsonSerializer.Deserialize<List<Enemy>>(textEnemy);
 string textWeapon = File.ReadAllText("weapons.json");
 List<Weapon> weapons = JsonSerializer.Deserialize<List<Weapon>>(textWeapon);
 
-Console.WriteLine($"Please choose a weapon to attack the enemy named {enemies[0].Name} with\n(You only need to write the number before the name)\n");
+Console.WriteLine($"Please choose a weapon to attack the enemy called {enemies[0].Name} with\n(You only need to write the number before the name)\n");
 
 int length = weapons.Count;
 for (int j = 0; j < length; j++)
@@ -42,7 +42,7 @@ if (enemies[0].HitPoints > 0)
 }
 else 
 {
-    Console.WriteLine($"{enemies[0].Name} took a lot of damage and is dead");
+    Console.WriteLine($"{enemies[0].Name} took too much damage and died");
 }
 
 Console.ReadLine();
@@ -52,8 +52,8 @@ Console.ReadLine();
 + Skriv kommentarer som förtydligar koden
 + Loop som avslutas när fiendens hp är 0 eller mindre - spelaren får attackera på nytt tills fienden har 0 hp
 + Flera fiender
-+ Spelaren får välja vem som ska attackeras först
-+ eller så väljs en random fiende
+- Spelaren får välja vem som ska attackeras först
+- eller så väljs en random fiende
 */
 
 
@@ -77,7 +77,6 @@ Console.ReadLine();
 //     DamageMin = 4,
 //     DamageMax = 19
 // };
-
 
 // string jsonWeapon = JsonSerializer.Serialize(firstWeapon);
 // Console.WriteLine(jsonWeapon);
