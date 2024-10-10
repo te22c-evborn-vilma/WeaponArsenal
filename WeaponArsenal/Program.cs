@@ -8,7 +8,7 @@ List<Enemy> enemies = JsonSerializer.Deserialize<List<Enemy>>(textEnemy);
 string textWeapon = File.ReadAllText("weapons.json");
 List<Weapon> weapons = JsonSerializer.Deserialize<List<Weapon>>(textWeapon);
 
-Console.WriteLine($"Please choose a weapon to attack {enemies[0].Name} with\n(only write the number before the name)\n");
+Console.WriteLine($"Please choose a weapon to attack the enemy named {enemies[0].Name} with\n(You only need to write the number before the name)\n");
 
 int length = weapons.Count;
 for (int j = 0; j < length; j++)
@@ -22,7 +22,7 @@ int weaponChoice = 0;
 int.TryParse(choice, out weaponChoice);
 
 Console.WriteLine($"{enemies[0].Name} has {enemies[0].HitPoints} Hp");
-Console.WriteLine("How many attacks do you want to make? \n(only write the number of attacks)");
+Console.WriteLine("How many attacks do you want to make? \n(You only need to write the number of attacks)");
 string atkNumAnswer = Console.ReadLine();
 
 int atkNum = 0;
@@ -48,6 +48,7 @@ else
 Console.ReadLine();
 
 /*
++ Se till att frågor upprepas om spelaren svarar något som inte finns
 + Skriv kommentarer som förtydligar koden
 + Loop som avslutas när fiendens hp är 0 eller mindre - spelaren får attackera på nytt tills fienden har 0 hp
 + Flera fiender
